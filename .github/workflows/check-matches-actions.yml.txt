@@ -1,0 +1,16 @@
+name: Matches checker
+
+
+# workflow triggers
+on:
+  repository_dispatch:
+    types:
+      - webhook
+
+jobs:
+  print:
+    runs:
+      using: "composite"
+      steps:
+        - run: echo Hello world!
+        shell: bash
