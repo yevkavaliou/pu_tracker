@@ -1,0 +1,14 @@
+name: Matches checker
+
+
+# workflow triggers
+on:
+  repository_dispatch:
+    types:
+      - webhook
+
+jobs:
+  say_hello_job:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo Hello world!
